@@ -1,5 +1,5 @@
 # Nodejs-Reverse-Proxy
-### The node-http-proxy module docs can be confusing for beginngers, so I made these simple proxies.
+#### The node-http-proxy module docs can be confusing for beginngers, so I made these simple proxies.
 
 ## Installation
 #### I assume you are familiar with the command line, nodejs, and npm. But here's some help if you need it
@@ -16,7 +16,7 @@ npm install
 
 However, HTTPS requires you generate a key and cert (LetsEncrypt is free). If you don't know what I'm talking about you have a little researching to do. Then add the key and cert to `https-proxy.js`.
 
-### Setup
+## Setup
 Edit the script to change proxy the `proxyPort` and `targetPort`. For a super simple proxy, just update the port you want the proxy to run on and the port you're proxying to.
 
 Running on port `80` or `443` require sudo / administrator permissions.
@@ -29,7 +29,7 @@ node http-proxy.js
 ```
 Or `node https-proxy.js`
 
-### Usage
+## Usage
 The `HTTP` Proxy essentially connects two ports. Traffic from the proxy goes to `http://${targetHost}:${targetPort}` with `targetHost = '127.0.0.1'`. Websocket upgrade is enabled. 
 
 The `HTTPS` proxy is the personal proxy I wrote to filter requests by subdomain and redirects to `http://${targetHost}:${targetPort}` with `targetHost = '127.0.0.1'`. The `getTargetPort()` fn determines the `targetPort` based on the `subdomain`. The proxy also includes `websocket` upgrade. Luckily, that's super easy with node-http-proxy :)
