@@ -1,5 +1,5 @@
 # Nodejs-Reverse-Proxy
-#### The node-http-proxy module docs can be confusing for beginngers, so I made these simple proxies.
+#### The node-http-proxy module docs can be confusing for beginngers, so I made 3 different proxy scripts any one could run and learn from.
 
 ## Installation
 #### I assume you are familiar with the command line, nodejs, and npm. But here's some help if you need it
