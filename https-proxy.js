@@ -47,8 +47,9 @@ const setHeaderRemoteAddress = (req) => { // Set the client's IP address in the 
 const server = https.createServer(options, (req, res) => {
   const targetPort = getTargetPort(req);
   if (targetPort === null) { // If targetPort is null, refuse the connection
-    res.statusCode = 403;
-    res.end('Forbidden');
+    res.connection.destroy();
+    //res.statusCode = 403;
+    //res.end('Forbidden');
     return;
   };
   setHeaderRemoteAddress(req);
