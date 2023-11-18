@@ -14,7 +14,9 @@ npm install
 ```
 4. You should read the [setup](#setup) first. But if you want, run `node http-proxy.js`.
 
-However, HTTPS requires you generate a key and cert (LetsEncrypt is free). If you don't know what I'm talking about you have a little researching to do. Then add the key and cert to `https-proxy.js`.
+In order to run `https-proxy.js` you need to meet HTTPS requirements. You need a signed key and cert (LetsEncrypt is free service for this). If you don't know what I'm talking about you have a little researching to do. Once you get a key and cert you need to add their respective file path to `https-proxy.js`.
+
+**Note** You can generate a key and cert locally for localhost development and your data will be encrypted, however the browser will not recognize your cert as safe because it is not signed by a Trusted Certificate Authority.
 
 ## Setup
 Edit the script to change proxy the `proxyPort` and `targetPort`. For a super simple proxy, just update the port you want the proxy to run on and the port you're proxying to.
